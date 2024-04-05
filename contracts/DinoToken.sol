@@ -75,4 +75,21 @@ contract DinoToken is IERC20, Ownable {
         address recipient,
         uint256 amount
     ) external override returns (bool) {}
+
+    // 新增奖励函数
+    function rewardPlayer(address player, uint256 amount) public onlyOwner {
+        require(
+            _balanceOf[address(this)] >= amount,
+            "Not enough tokens in contract for reward"
+        );
+        _transfer(address(this), player, amount);
+    }
+
+    // 新增内部转账函数
+    function _transfer(address from, address to, uint256 amount) internal {
+        require(_balanceOf[from] >= amount, "Insufficient balance");
+        _balanceOf[from] -= amount;
+        _balanceOf[to] += amount;
+        emit Transfer(from, to, amount);
+    }
 }
