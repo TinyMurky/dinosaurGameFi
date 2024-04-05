@@ -1,0 +1,26 @@
+{
+  "name": "dinosaurgamefi",
+  "version": "0.0.1",
+  "description": "my practice gameFi",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinyMurky/dinosaurGameFi.git"
+  },
+  "keywords": [
+    "ERC20"
+  ],
+  "author": "TinyMurky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TinyMurky/dinosaurGameFi/issues"
+  },
+  "homepage": "https://github.com/TinyMurky/dinosaurGameFi#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.2"
+  }
+}
